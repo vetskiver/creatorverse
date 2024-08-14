@@ -208,7 +208,7 @@ form button.delete:hover {
 
 /* Button styling for deletion */
 .delete-button {
-  background-color: #dc3545;
+  background-color: #dc3545; /* Red */
   color: #ffffff;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -257,20 +257,48 @@ form button.delete:hover {
 }
 
 .creator-actions {
-  margin-top: 1rem; /* Space above the button */
+  margin-top: 1rem; /* Space above the buttons */
+  display: flex;
+  flex-direction: column; /* Stack the buttons vertically */
+  align-items: center; /* Center the buttons horizontally */
+  gap: 1rem; /* Space between the buttons */
+}
+
+/* Common styles for both buttons */
+.creator-actions button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 150px; /* Same width for both buttons */
+}
+
+.edit-button {
+  background-color: #007bff; /* Blue */
+  color: #ffffff;
+}
+
+.edit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .delete-button {
   background-color: #dc3545; /* Red */
   color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
 }
 
 .delete-button:hover {
   background-color: #c82333; /* Darker red on hover */
+}
+
+/* Add this CSS for the "Go Back" button */
+.back-button {
+  background-color: #6c757d; /* Gray color */
+  color: #ffffff;
+}
+
+.back-button:hover {
+  background-color: #5a6268; /* Darker gray on hover */
 }

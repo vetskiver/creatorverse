@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { supabase } from '../client';
 
 const ViewCreator = () => {
   const { id } = useParams(); 
-  const navigate = useNavigate(); // For redirection
+  const navigate = useNavigate(); 
   const [creator, setCreator] = useState(null); 
   const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null); 
@@ -42,6 +42,10 @@ const ViewCreator = () => {
     }
   };
 
+  const handleBack = () => {
+    navigate(-1); // Navigate to the previous page
+  };
+
   if (loading) return <p>Loading...</p>; 
   if (error) return <p>Error: {error}</p>; 
   if (!creator) return <p>Content Creator not found.</p>; 
@@ -59,8 +63,14 @@ const ViewCreator = () => {
         )}
       </div>
       <div className="creator-actions">
+        <Link to={`/edit/${creator.id}`}>
+          <button className="edit-button">Edit Creator</button>
+        </Link>
         <button onClick={handleDelete} className="delete-button">
           Delete Creator
+        </button>
+        <button onClick={handleBack} className="back-button">
+          Go Back
         </button>
       </div>
     </div>
