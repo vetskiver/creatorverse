@@ -2,7 +2,20 @@
 
 Submitted by: **👉🏿 Ali Reza Ghasemi **
 
-About this web app: **👉🏿 App Description Here**
+About this web app:
+
+This web app is a dynamic platform for discovering and managing content creators across various digital media channels. It allows users to browse through a list of content creators, each represented with a card that includes their name, image, and brief description. The application provides functionalities for viewing detailed profiles, adding new creators, editing existing entries, and deleting creators.
+
+### Key Features:
+- **Homepage Display**: Users are presented with a list of content creator cards on the homepage. Each card includes the creator's name, a link to their channel/page, and a short description.
+- **Detailed View**: Clicking on a content creator’s card takes users to a detailed view where more information about the creator is displayed, including their name, URLs to their social media profiles, and a detailed description.
+- **CRUD Operations**: Users can perform create, read, update, and delete (CRUD) operations:
+  - **Add**: Users can add new content creators by providing their name, URL, description, and an image.
+  - **Edit**: Existing content creators can be updated with new information.
+  - **Delete**: Users can remove content creators from the list.
+- **Interactive Design**: The app features an interactive particle background that adds a modern and engaging visual element to the user interface. The particle effects respond to user interactions, such as clicks and hover, enhancing the overall user experience.
+
+The app utilizes a logical component structure in React for a clean and maintainable codebase. It integrates API calls using async/await to handle data fetching and manipulation efficiently.
 
 Time spent: **👉🏿 12 hours**
 
