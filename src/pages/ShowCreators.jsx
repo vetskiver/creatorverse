@@ -43,7 +43,9 @@ const ShowCreators = () => {
               <Card
                 id={creator.id}
                 name={creator.name}
-                url={creator.url}
+                twitterURL={creator.twitterURL}
+                youtubeURL={creator.youtubeURL}
+                instagramURL={creator.instagramURL}
                 description={creator.description}
                 imageURL={creator.imageURL}
               />

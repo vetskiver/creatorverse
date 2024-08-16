@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { supabase } from '../client'; 
+import { supabase } from '../client';
 
 const AddCreator = () => {
   const navigate = useNavigate();
   const [creator, setCreator] = useState({
     name: '',
-    url: '',
+    twitterURL: '',
+    youtubeURL: '',
+    instagramURL: '',
     description: '',
     imageURL: ''
   });
@@ -47,13 +49,30 @@ const AddCreator = () => {
           />
         </label>
         <label>
-          URL:
+          Twitter URL:
           <input
             type="url"
-            name="url"
-            value={creator.url}
+            name="twitterURL"
+            value={creator.twitterURL}
             onChange={handleChange}
-            required
+          />
+        </label>
+        <label>
+          YouTube URL:
+          <input
+            type="url"
+            name="youtubeURL"
+            value={creator.youtubeURL}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Instagram URL:
+          <input
+            type="url"
+            name="instagramURL"
+            value={creator.instagramURL}
+            onChange={handleChange}
           />
         </label>
         <label>

@@ -7,7 +7,9 @@ const EditCreator = () => {
   const navigate = useNavigate();
   const [creator, setCreator] = useState({
     name: '',
-    url: '',
+    twitterURL: '',
+    youtubeURL: '',
+    instagramURL: '',
     description: '',
     imageURL: ''
   });
@@ -52,7 +54,7 @@ const EditCreator = () => {
     if (error) {
       console.error('Error deleting creator:', error.message);
     } else {
-      navigate('/creators');
+      navigate('/');
     }
   };
 
@@ -71,13 +73,30 @@ const EditCreator = () => {
           />
         </label>
         <label>
-          URL:
+          Twitter URL:
           <input
             type="url"
-            name="url"
-            value={creator.url}
+            name="twitterURL"
+            value={creator.twitterURL}
             onChange={handleChange}
-            required
+          />
+        </label>
+        <label>
+          YouTube URL:
+          <input
+            type="url"
+            name="youtubeURL"
+            value={creator.youtubeURL}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Instagram URL:
+          <input
+            type="url"
+            name="instagramURL"
+            value={creator.instagramURL}
+            onChange={handleChange}
           />
         </label>
         <label>
